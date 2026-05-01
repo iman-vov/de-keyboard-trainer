@@ -1,0 +1,22 @@
+{
+  "title": "Академія Джедаїв",
+  "subtitle": "Обери планету для тренування",
+  "language": "Мова:",
+  "back": "Назад",
+  "back_to_map": "На карту",
+  "next_planet": "Наступна планета",
+  "play_again": "Ще раз",
+  "round_complete": "Раунд пройдено!",
+  "msg_perfect": "Ідеально! Ти справжній джедай! ⚡",
+  "msg_great": "Чудово! Продовжуй! 🌟",
+  "msg_good": "Добре! Практика — шлях до сили! 💪",
+  "planet_coruscant": "Корусант",
+  "planet_tatooine": "Татуїн",
+  "planet_hoth": "Хот",
+  "planet_dagobah": "Дагоба",
+  "planet_endor": "Ендор",
+  "paused": "Пауза",
+  "continue_game": "Продовжити",
+  "restart": "Заново",
+  "esc_hint": "ESC = Пауза"
+}

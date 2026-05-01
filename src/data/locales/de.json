@@ -1,0 +1,22 @@
+{
+  "title": "Jedi Tastatur Akademie",
+  "subtitle": "Wähle deinen Trainingsplaneten",
+  "language": "Sprache:",
+  "back": "Zurück",
+  "back_to_map": "Zur Karte",
+  "next_planet": "Nächster Planet",
+  "play_again": "Nochmal",
+  "round_complete": "Runde geschafft!",
+  "msg_perfect": "Perfekt! Du bist ein Jedi-Meister! ⚡",
+  "msg_great": "Super gemacht! Weiter so! 🌟",
+  "msg_good": "Gut! Übung macht den Meister! 💪",
+  "planet_coruscant": "Coruscant",
+  "planet_tatooine": "Tatooine",
+  "planet_hoth": "Hoth",
+  "planet_dagobah": "Dagobah",
+  "planet_endor": "Endor",
+  "paused": "Pause",
+  "continue_game": "Weiterspielen",
+  "restart": "Neustart",
+  "esc_hint": "ESC = Pause"
+}
