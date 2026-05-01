@@ -25,98 +25,11 @@ export default class BootScene extends Phaser.Scene {
   }
 
   create() {
-    this.createJediTextures()
     this.createLetterTileTexture()
     this.createBackgroundTextures()
     this.createStarTextures()
     this.createKeyTextures()
     this.scene.start('MenuScene')
-  }
-
-  createJediTextures() {
-    // idle
-    const idle = this.make.graphics({ x: 0, y: 0, add: false })
-    this.drawJediBase(idle, 50, 0)
-    this.drawLightsaber(idle, 80, -15, 0)
-    idle.generateTexture('jedi_idle', 110, 140)
-    idle.destroy()
-
-    // swing — lightsaber angled forward
-    const swing = this.make.graphics({ x: 0, y: 0, add: false })
-    this.drawJediBase(swing, 50, 0)
-    this.drawLightsaber(swing, 85, 10, -40)
-    swing.generateTexture('jedi_swing', 110, 140)
-    swing.destroy()
-
-    // stumble — body shifted and tilted
-    const stumble = this.make.graphics({ x: 0, y: 0, add: false })
-    this.drawJediBase(stumble, 45, 8)
-    this.drawLightsaber(stumble, 75, 5, 20)
-    stumble.generateTexture('jedi_stumble', 110, 140)
-    stumble.destroy()
-
-    // victory — arms up
-    const victory = this.make.graphics({ x: 0, y: 0, add: false })
-    this.drawJediBase(victory, 50, 0)
-    this.drawLightsaber(victory, 80, -30, -60)
-    victory.generateTexture('jedi_victory', 110, 140)
-    victory.destroy()
-  }
-
-  drawJediBase(g, cx, offsetY) {
-    const y = offsetY
-    // Robe
-    g.fillStyle(0x8B6914)
-    g.fillRect(cx - 22, 50 + y, 44, 60)
-    // Belt
-    g.fillStyle(0x5c3d00)
-    g.fillRect(cx - 22, 82 + y, 44, 8)
-    // Head
-    g.fillStyle(0xDEB887)
-    g.fillCircle(cx, 35 + y, 22)
-    // Hair
-    g.fillStyle(0x3D1C02)
-    g.fillEllipse(cx, 22 + y, 40, 20)
-    // Eyes
-    g.fillStyle(0x2c1810)
-    g.fillCircle(cx - 8, 34 + y, 3)
-    g.fillCircle(cx + 8, 34 + y, 3)
-    // Smile
-    g.fillStyle(0xc0875a)
-    g.fillRect(cx - 5, 42 + y, 10, 3)
-    // Arms
-    g.fillStyle(0x8B6914)
-    g.fillRect(cx - 34, 52 + y, 14, 35)
-    g.fillRect(cx + 20, 52 + y, 14, 35)
-  }
-
-  drawLightsaber(g, hx, hy, angle) {
-    const rad = (angle * Math.PI) / 180
-    const bladeLen = 65
-    const bx = Math.sin(rad) * bladeLen
-    const by = -Math.cos(rad) * bladeLen
-
-    // Handle
-    g.fillStyle(0x888888)
-    g.fillRect(hx - 4, hy, 8, 18)
-
-    // Blade glow (outer)
-    g.lineStyle(10, 0x0055ff, 0.25)
-    g.beginPath()
-    g.moveTo(hx, hy)
-    g.lineTo(hx + bx, hy + by)
-    g.strokePath()
-
-    // Blade core
-    g.lineStyle(4, 0x00aaff, 1)
-    g.beginPath()
-    g.moveTo(hx, hy)
-    g.lineTo(hx + bx, hy + by)
-    g.strokePath()
-
-    // Blade tip
-    g.fillStyle(0xffffff)
-    g.fillCircle(hx + bx, hy + by, 3)
   }
 
   createLetterTileTexture() {
